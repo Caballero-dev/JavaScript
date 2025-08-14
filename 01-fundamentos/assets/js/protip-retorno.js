@@ -19,9 +19,15 @@ function imprimirArgumentos() {
   console.log( arguments );
 }
 
-// Una función de flecha no tieneel objeto de argumentos
-// ( ...args, edad ) -> no valido
-// ( edad, ...args) -> valido
+// Una función de flecha no tiene el objeto de arguments
+/*
+El operador ... en los parámetros de una función se llama operador rest. 
+Sirve para capturar todos los argumentos adicionales que no tienen un parámetro explícito 
+asignado y los agrupa en un arreglo. Es útil para manejar funciones con un número variable 
+de argumentos o para trabajar con desestructuración.
+*/
+// ( ...args, edad ) -> // ❌ No válido
+// ( edad, ...args) -> // ✅ Válido
 const imprimirArgumentos2 = ( edad, ...args ) => {
   // console.log({ edad, args });
   return args;
