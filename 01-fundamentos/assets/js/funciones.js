@@ -40,4 +40,48 @@ const saludarFlecha2 = ( nombre ) => {
 saludar( 'Eduardo', 20, false );
 saludar2( 'Fernando' );
 saludarFlecha();
-saludarFlecha2( 'Mateo' );
+saludarFlecha2( 'Juan' );
+
+/* ------------------------- return ------------------------- */
+
+// return -> se le indica a la función que valor retornar
+function saludarRetorno(nombre) {
+  console.log( 'Hola ' + nombre );
+  // se le indica que regresar
+  // return 10;
+  return [20, 10, 1]
+
+  // El código despues del return no se va a ejecutar
+  console.log( 'Hola de nuevo' ); 
+}
+
+const retornoDeSaludar = saludarRetorno( 'lalo' );
+// console.log({ retornoDeSaludar });
+console.log( retornoDeSaludar[0], retornoDeSaludar[1] );
+
+// Ejemplo de retorno
+function sumar ( a, b ) {
+  return a + b;
+}
+
+// const sumar2 = (a,b) => {
+//   return a + b;
+// }
+
+// En la función de flecha cuando se tiene solo una liena de código con return, 
+// se puede reducir el codigo de la siguiete manera 
+const sumar2 = (a,b) => a + b;
+
+console.log( sumar(1,2) );
+console.log( sumar2(10,2) );
+
+/* ------------------------------------------ */
+
+function getAleatorio() {
+  return Math.random();
+}
+
+const getAleatorio2 = () => Math.random();
+
+console.log( getAleatorio() );
+console.log( getAleatorio2() );
