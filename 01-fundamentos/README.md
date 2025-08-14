@@ -1,23 +1,36 @@
-# JavaScript
+# Fundamentos
+Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para comprender y trabajar con este lenguaje de programación.
 
-JavaScript fue creado por Brendan Eich para satisfacer la necesidad de un lenguaje de programación que se ejecutara del lado del cliente, permitiendo que las páginas web fueran más dinámicas, atractivas e interactivas para los usuarios.
+- [Datos primitivos](#datos-primitivos)
+  - [Tipos de datos primitivos](#tipos-de-datos-primitivos)
+  - [¿Qué son los primitivos?](#qué-son-los-primitivos)
+- [Convenciones de nombres](#convenciones-de-nombres)
+  - [Nombre de archivos](#nombre-de-archivos)
+  - [Nombre de variables](#nombre-de-variables)
+  - [Nombre de clases](#nombre-de-clases)
+- [Palabras reservadas](#palabras-reservadas)
+- [Arreglos](#arreglos)
+- [Objetos literales](#objetos-literales)
+- [Funciones](#funciones)
 
-## Tipos de datos primitivos
+## Datos primitivos
+
+### Tipos de datos primitivos
 
 JavaScript es un lenguaje débilmente tipado; es decir, no se le indica qué tipo de dato es una variable, JavaScript lo infiere automáticamente.
 
 El tipo de dato de una variable describe el contenido del valor que tiene la variable. Ejemplo
 
 ```javascript
-//  variable | tipo de dato cadena de texto
+// variable | tipo de dato cadena de texto
 let canasta = 'Manzana';
 
-//  variable | tipo de dato numérico
+// variable | tipo de dato numérico
 let edad = 16;
 ```
 
-## ¿Qué son los primitivos?
-Es información que no es objeto y es inmutable.
+#### ¿Qué son los primitivos?
+Son valores que no son objetos y son inmutables (no se pueden modificar directamente).
 
 - **Boolean**: true / false
 - **Null**: Sin valor en lo absoluto
@@ -28,19 +41,19 @@ Es información que no es objeto y es inmutable.
 
 > Código ejemplo [primitivos.js](assets/js/primitivos.js)
 
----
+## Convenciones de nombres
 
-## Nombre de archivos
+### Nombre de archivos
 Para el nombre de los archivos se recomienda colocar un `-` si tiene varias palabras. Ejemplo `palabras-reservadas.js`
 
-## Nombre de variables
+### Nombre de variables
 Para los nombres de las variables se recomienda utilizar lowerCamelCase; esto se refiere a iniciar la primera palabra en minúscula y, si es una combinación de palabras, la segunda palabra empieza con la primera letra capitalizada. Ejemplo
 
 ```javascript
 let esMayor;
 ```
 
-## Nombre de clases
+### Nombre de clases
 Para los nombres de las clases se recomienda utilizar UpperCamelCase; esto se refiere a iniciar la primera letra de cada palabra en mayúscula. Ejemplo
 
 ```javascript
@@ -78,3 +91,5 @@ Una función en JavaScript es un bloque reutilizable de código que agrupa instr
 Puede recibir parámetros (entradas) y opcionalmente devolver un valor. Facilita la organización, reutilización y mantenimiento del código.
 
 > Código ejemplo [funciones.js](assets/js/funciones.js)
+
+> Protip retorno [protip-retorno.js](assets/js/protip-retorno.js)
