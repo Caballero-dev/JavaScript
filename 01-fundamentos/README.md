@@ -72,3 +72,9 @@ Son un objeto muy parecido a una lista de información, que contiene un grupo de
 Un objeto literal es la forma más directa de crear un objeto escribiendo sus pares clave–valor entre llaves. No requiere clases ni new; sirve para agrupar datos y funciones relacionadas.
 
 > Código ejemplo [objeto-literal.js](assets/js/objeto-literal.js)
+
+## Funciones
+Una función en JavaScript es un bloque reutilizable de código que agrupa instrucciones para realizar una tarea.
+Puede recibir parámetros (entradas) y opcionalmente devolver un valor. Facilita la organización, reutilización y mantenimiento del código.
+
+> Código ejemplo [funciones.js](assets/js/funciones.js)
