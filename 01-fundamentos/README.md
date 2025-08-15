@@ -12,6 +12,7 @@ Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para com
 - [Arreglos](#arreglos)
 - [Objetos literales](#objetos-literales)
 - [Funciones](#funciones)
+- [Valor, referencia y romper la referencia](#valor-referencia-y-romper-la-referencia)
 
 ## Datos primitivos
 
@@ -93,3 +94,9 @@ Puede recibir parámetros (entradas) y opcionalmente devolver un valor. Facilita
 > Código ejemplo [funciones.js](assets/js/funciones.js)
 
 > Protip retorno [protip-retorno.js](assets/js/protip-retorno.js)
+
+## Valor, referencia y romper la referencia
+
+En JavaScript, los tipos primitivos se copian por valor, mientras que los objetos y arreglos se manejan por referencia. Esto significa que los cambios en un objeto o arreglo pueden afectar a todas las variables que lo referencian. Sin embargo, es posible romper esta referencia creando copias superficiales o profundas. Este archivo incluye ejemplos prácticos que ilustran cómo funcionan estos conceptos y cómo evitar problemas al trabajar con referencias.
+
+> Código ejemplo [valor-referencia.js](assets/js/valor-referencia.js)
