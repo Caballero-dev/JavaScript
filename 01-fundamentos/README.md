@@ -100,3 +100,36 @@ Puede recibir parámetros (entradas) y opcionalmente devolver un valor. Facilita
 En JavaScript, los tipos primitivos se copian por valor, mientras que los objetos y arreglos se manejan por referencia. Esto significa que los cambios en un objeto o arreglo pueden afectar a todas las variables que lo referencian. Sin embargo, es posible romper esta referencia creando copias superficiales o profundas. Este archivo incluye ejemplos prácticos que ilustran cómo funcionan estos conceptos y cómo evitar problemas al trabajar con referencias.
 
 > Código ejemplo [valor-referencia.js](assets/js/valor-referencia.js)
+
+## Estructura de control
+Las estructuras de control permiten modificar el flujo de ejecución del programa.
+
+### Lógica booleana
+La lógica booleana en programación es un sistema de álgebra que trabaja con dos valores: verdadero (`true`) y falso (`false`). Es fundamental para tomar decisiones dentro del código, ya que permite controlar el flujo de ejecución mediante condiciones.
+
+Se utiliza para evaluar expresiones lógicas mediante operadores como:
+- **AND** (`&&`): Devuelve `true` si ambas condiciones son verdaderas.
+- **OR** (`||`): Devuelve `true` si al menos una condición es verdadera.
+- **NOT** (`!`): Invierte el valor lógico, es decir, convierte `true` en `false` y viceversa.
+
+> Código ejemplo: [logica-booleana.js](assets/js/logica-booleana.js)
+
+### Condicionales
+Las condicionales permiten ejecutar bloques de código según condiciones específicas. Las más comunes son:
+
+#### If-Else 
+La estructura `if-else` evalúa una condición y ejecuta un bloque de código si esta es verdadera. Si no lo es, ejecuta el bloque del else.
+
+> Código ejemplo [if-else.js](assets/js/if-else.js)
+
+### Operador ternario
+El operador ternario es una forma compacta de escribir una condición. Este operador es útil para simplificar expresiones condicionales en una sola línea.
+
+> Código ejemplo [operador-ternario.js](assets/js/operador-ternario.js)
+
+> Código ejemplo [protip-ternario.js  ](assets/js/protip-ternario.js)
+
+#### Switch
+La estructura `switch` evalúa una expresión y ejecuta el bloque de código asociado al caso que coincida. Es útil cuando se tienen múltiples valores específicos que evaluar.
+
+> Código ejemplo [switch.js](assets/js/switch.js)
