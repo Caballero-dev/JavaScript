@@ -13,6 +13,9 @@ Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para com
 - [Objetos literales](#objetos-literales)
 - [Funciones](#funciones)
 - [Valor, referencia y romper la referencia](#valor-referencia-y-romper-la-referencia)
+- [Estructura de control](#estructura-de-control)
+  - [Lógica booleana](#lógica-booleana)
+  - [Condicionales](#condicionales)
 
 ## Datos primitivos
 
