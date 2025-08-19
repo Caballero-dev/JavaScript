@@ -16,6 +16,9 @@ Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para com
 - [Estructura de control](#estructura-de-control)
   - [Lógica booleana](#lógica-booleana)
   - [Condicionales](#condicionales)
+- [Ciclos](#ciclos)
+  - [while y do while](#while-y-do-while)
+  - [for](#for)
 
 ## Datos primitivos
 
