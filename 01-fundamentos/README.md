@@ -16,9 +16,7 @@ Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para com
 - [Estructura de control](#estructura-de-control)
   - [Lógica booleana](#lógica-booleana)
   - [Condicionales](#condicionales)
-- [Ciclos](#ciclos)
-  - [while y do while](#while-y-do-while)
-  - [for](#for)
+  - [Ciclos](#ciclos)
 
 ## Datos primitivos
 
@@ -128,7 +126,7 @@ La estructura `if-else` evalúa una condición y ejecuta un bloque de código si
 
 > Código ejemplo [if-else.js](assets/js/bases/if-else.js)
 
-### Operador ternario
+#### Operador ternario
 El operador ternario es una forma compacta de escribir una condición. Este operador es útil para simplificar expresiones condicionales en una sola línea.
 
 > Código ejemplo [operador-ternario.js](assets/js/bases/operador-ternario.js)
