@@ -123,9 +123,9 @@ La declaración `'use strict'` activa el modo estricto de JavaScript. Este modo:
 
 **Ejemplo de código antes y después de minificar:**
 
-Antes de minificar: [Ver código](assets/js/juego.js)
+Antes de minificar: [Ver código](assets/js/src/)
 
-Despues de minificar: [Ver código](assets/js/juego-min.js)
+Despues de minificar: [Ver código](assets/js/dist/)
 
 **Herramienta para minificar código:**
 - [JavaScript Minifier](https://www.toptal.com/developers/javascript-minifier)
