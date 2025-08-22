@@ -65,8 +65,11 @@ El **Patrón Módulo** es uno de los patrones más comunes en JavaScript y se ut
 - **Evita la contaminación del espacio global:** Reduce el riesgo de conflictos entre nombres de variables o funciones.
 - **Organización:** Facilita la modularidad y el mantenimiento del código.
 
-#### **¿Cómo se declara?**
-El Patrón Módulo se implementa utilizando una **IIFE** (Immediately Invoked Function Expression), que es una función que se ejecuta inmediatamente después de ser definida.
+#### **Formas de implementar el Patrón Módulo**
+Existen dos formas principales de implementar el Patrón Módulo en JavaScript:
+
+##### **1. Usando IIFE (Immediately Invoked Function Expression)**
+Es la forma tradicional y compatible con navegadores antiguos. Consiste en una función que se ejecuta inmediatamente después de ser definida.
 
 **Ejemplo básico:**
 ```javascript
@@ -85,9 +88,43 @@ const miModulo = (() => {
     obtenerContador
   };
 })();
+
+// Uso del módulo
+console.log(miModulo.obtenerContador()); // 0
+console.log(miModulo.contador); // undefined (variable privada)
 ```
 
-### `'use strict'`
+##### **2. Usando ES Modules (import/export)**
+Es el sistema de módulos nativo de JavaScript moderno (ES6+). Permite dividir el código en archivos separados y exportar/importar funcionalidades específicas.
+
+**Ejemplo básico:**
+```javascript
+// Archivo: contador.js
+// Variables privadas
+let contador = 0;
+
+// Función privada
+const incrementar = () => contador++;
+
+// Funciones públicas (exportadas)
+export const obtenerContador = () => contador;
+// También se puede usar export default para exportar un único elemento
+export {
+  obtenerContador
+};
+
+// Archivo: app.js
+// Importación específica de funciones
+import { obtenerContador } from './contador.js';
+console.log(obtenerContador());
+```
+> Mas información sobre las diferentes implementaciónes
+> - [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+> - [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+> - [Design Patterns in JavaScript](https://www.chucksacademy.com/es/topic/javascript-design-patterns/module-pattern)
+
+
+### use strict
 La declaración 'use strict' activa el modo estricto de JavaScript. Este modo ayuda a escribir código más seguro y limpio al evitar errores comunes.
 
 La declaración `'use strict'` activa el modo estricto de JavaScript. Este modo:
@@ -116,7 +153,12 @@ La declaración `'use strict'` activa el modo estricto de JavaScript. Este modo:
 })();
 ```
 
-> Mas información sobre `use strict` [aqui](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Strict_mode)
+**Nota importante:** Los módulos ES6 utilizan **'use strict'** automáticamente, por lo que no es necesario incluir esta declaración de forma explícita. Este comportamiento difiere de los scripts tradicionales, donde el modo estricto debe ser activado manualmente.
+
+
+> Mas información sobre 'use strict'
+> - [Strict mode](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Strict_mode)
+> - [Otras diferencias entre módulos y scripts estándar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts)
 
 ### Code Minify
 **Code Minify** es el proceso de eliminar caracteres innecesarios del código fuente (como espacios, saltos de línea y comentarios) sin afectar su funcionalidad. Esto se hace para reducir el tamaño del archivo y mejorar el rendimiento de las aplicaciones web.
