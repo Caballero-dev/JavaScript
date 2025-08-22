@@ -54,7 +54,7 @@ El objeto principal para acceder al DOM es **document**, que proporciona método
 
 ## Patrón módulo y optimizaciones
 
-El código inicial del juego tiene ciertas vulnerabilidades que pueden ser explotadas desde la consola del navegador. Para evitar esto y mejorar la organización del código, se utiliza el **Patrón Módulo** junto con otras optimizaciones. [(Código inicial)](/02-blackjack/assets/js/juego.inicial.js)
+El código inicial del juego tiene ciertas vulnerabilidades que pueden ser explotadas desde la consola del navegador. Para evitar esto y mejorar la organización del código, se utiliza el **Patrón Módulo** junto con otras optimizaciones. [(Código inicial)](https://github.com/Caballero-dev/JavaScript/blob/19b8c0a55263220836972e0497c995c123a443af/02-blackjack/assets/js/juego.js)
 
 ### Patrón Módulo
 
