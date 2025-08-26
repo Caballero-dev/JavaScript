@@ -17,6 +17,7 @@ Los fundamentos de JavaScript abarcan los conceptos básicos necesarios para com
   - [Lógica booleana](#lógica-booleana)
   - [Condicionales](#condicionales)
   - [Ciclos](#ciclos)
+- [Clases](#clases)
 
 > Mas información [aqui](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
