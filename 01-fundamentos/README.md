@@ -212,3 +212,20 @@ Mas información sobre propiedades privadas [aqui](https://developer.mozilla.org
 
 > **Código relacionado:** [propiedades-privadas.js](assets/js/classes/propiedades-privadas.js)
 
+### Singletons
+El patrón **Singleton** asegura que una clase tenga una única instancia y proporciona un punto global de acceso a ella. Este patrón es útil para manejar recursos compartidos, como configuraciones globales o conexiones a bases de datos.
+
+**Características del patrón Singleton:**
+- **Única instancia:** Garantiza que solo exista una instancia de la clase en todo el programa.
+- **Acceso global:** Proporciona un punto de acceso único a la instancia.
+- **Control interno:** Utiliza una propiedad estática privada para almacenar la instancia.
+
+> **Código relacionado:** [singleton.js](assets/js/classes/singleton.js)
+
+### Múltiples constructores
+En JavaScript, las clases no soportan sobrecarga de constructores de forma nativa como en otros lenguajes (por ejemplo, Java o C#). Sin embargo, se pueden implementar múltiples formas de inicialización utilizando:
+
+- Lógica condicional dentro del constructor.
+- Métodos estáticos para crear instancias.
+
+> **Código relacionado:** [constructores-multiples.js](assets/js/classes/constructores-multiples.js)
