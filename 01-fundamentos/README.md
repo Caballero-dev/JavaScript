@@ -160,3 +160,54 @@ El ciclo `for` es una estructura que permite iterar sobre arreglos, objetos y ot
 - **For-of:** Recorre directamente los valores de un arreglo o cualquier objeto iterable.
 
 > Código ejemplo: [for.js](assets/js/ciclos/for.js)
+
+## Clases
+En esta sección se exploran los conceptos fundamentales de las clases en JavaScript, una característica clave para la programación orientada a objetos (POO). Las clases permiten encapsular datos y comportamientos, facilitando la reutilización, la organización y el mantenimiento del código.
+
+### Problematica de prototipos
+En versiones anteriores a ES6, los objetos en JavaScript se creaban utilizando **objetos literales** o **funciones constructoras**. Sin embargo, estas formas presentaban problemas como:
+- **Redundancia:** Cada objeto debía definir sus propios métodos, lo que generaba duplicación de código.
+- **Falta de consistencia:** No había una estructura clara para garantizar que todos los objetos compartieran las mismas propiedades y métodos.
+
+> Código ejemplo: [problema.js](assets/js/classes/problema.js)
+
+### Clases
+Con ES6, se introdujo la palabra clave `class`, que simplifica la creación de objetos y resuelve los problemas de las funciones constructoras. Las clases permiten:
+- Definir propiedades y métodos comunes para todas las instancias.
+- Utilizar un constructor para inicializar las propiedades de los objetos.
+- Implementar **setters** y **getters** para controlar el acceso a las propiedades.
+
+
+#### Sets y Gets
+Los **setters** (`set`) y **getters** (`get`) son métodos especiales que permiten asignar y obtener valores de las propiedades de una clase de manera controlada. Esto es útil para:
+- Validar o transformar los datos antes de asignarlos.
+- Proteger las propiedades internas de la clase.
+
+#### Métodos estáticos
+Los **métodos estáticos** (`static`) pertenecen a la clase y no a las instancias. Esto significa que:
+- Se acceden directamente desde la clase, no desde los objetos creados.
+- Son útiles para definir funciones utilitarias o relacionadas con la clase en general.
+
+#### Gets estáticos
+Los **getters estáticos** (`static get`) permiten acceder a propiedades estáticas de la clase de manera controlada. Son útiles para obtener información relacionada con la clase, como contadores o configuraciones globales.
+
+> **Código relacionado:** [class.js](assets/js/classes/class.js)
+
+### Extends - Clases con SubClases
+La **herencia** permite que una clase (subclase) extienda otra clase (clase padre) utilizando la palabra clave `extends`. Esto permite:
+- Reutilizar las propiedades y métodos de la clase padre.
+- Sobrescribir métodos para personalizar el comportamiento en la subclase.
+- Utilizar `super` para llamar al constructor o métodos de la clase padre.
+
+> **Código relacionado:** [sub-clases.js](assets/js/classes/sub-clases.js)
+
+### Propiedades privadas
+Las **propiedades privadas** se introdujeron para proteger los datos internos de una clase. Estas propiedades:
+- Se definen utilizando el prefijo `#`.
+- Solo son accesibles desde dentro de la clase.
+- Ayudan a encapsular la lógica interna y proteger la integridad de los datos.
+
+Mas información sobre propiedades privadas [aqui](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/Private_elements)
+
+> **Código relacionado:** [propiedades-privadas.js](assets/js/classes/propiedades-privadas.js)
+
