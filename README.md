@@ -8,9 +8,8 @@ JavaScript ha evolucionado significativamente desde su creación, con nuevas ver
 
 **ECMAScript** es el nombre oficial del estándar JavaScript.
 
-A partir de 1997, las versiones se abreviaron con números (ES1, ES2, ES3, ES5, ES6).
-
-Desde 2016, las versiones se nombran por año (ECMAScript 2016, 2017, 2018, etc.).
+- A partir de 1997, las versiones se abreviaron con números (ES1, ES2, ES3, ES5, ES6).
+- Desde 2016, las versiones se nombran por año (ECMAScript 2016, 2017, 2018, etc.).
 
 > Pudes ver mas información sobre las diferentes versiones en [JavaScript Versions](https://www.w3schools.com/Js/js_versions.asp)
 
@@ -29,6 +28,15 @@ Este proyecto pone en práctica los conceptos aprendidos en los fundamentos y ut
 - Optimización del código y uso de herramientas como minificación.
 
 > **Más información:** Consulta [`02-blackjack`](02-blackjack/README.md)
+
+## Módulos y Vite
+
+En esta sección se exploran conceptos fundamentales para el desarrollo de aplicaciones modernas en JavaScript, como el uso de **bundlers** y herramientas que optimizan el flujo de trabajo.
+
+> **Más información:** Consulta [`03-vite-app`](03-vite-app/README.md)
+
+
+
 
 ## Recursos recomendados
 
