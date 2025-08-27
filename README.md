@@ -35,7 +35,11 @@ En esta sección se exploran conceptos fundamentales para el desarrollo de aplic
 
 > **Más información:** Consulta [`03-vite-app`](03-vite-app/README.md)
 
+## Blackjack con Vite
 
+Este proyecto es una versión mejorada del juego de Blackjack desarrollado previamente en [Blackjack-js-vanilla](02-blackjack/README.md). En esta versión, se utiliza **Vite** como herramienta principal para optimizar el flujo de trabajo y se refactoriza el código para hacerlo más modular y escalable.
+
+> **Más información:** Consulta [`04-blackjack-vite`](04-blackjack-vite/README.md)
 
 
 ## Recursos recomendados
