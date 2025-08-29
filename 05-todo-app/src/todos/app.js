@@ -8,6 +8,7 @@ const ElementIDs = {
   ClearCompletedBtn: '.clear-completed',
   TodoFilters: '.filtro',
   PendingCountLabel: '#pending-count',
+  EditInput: '.edit',
 }
 
 /**
@@ -45,25 +46,51 @@ export const App = ( elementId ) => {
     if ( event.keyCode !== 13 ) return;
     if ( event.target.value.trim().length === 0 ) return;
 
-    todoStore.addTodo( event.target.value );
+    todoStore.addTodo( event.target.value.trim() );
     displayTodo();
     event.target.value = '';
   });
 
   todoListUl.addEventListener('click', (event) => {
+      const isCheckElement = event.target.className === 'toggle';
+      const element = event.target.closest('[data-id]');
 
-    const element = event.target.closest('[data-id]');
-    const classList = event.target.classList; 
+      if ( !element || !isCheckElement ) return;
 
-    if( element && classList.contains( 'destroy' ) ) {
-      todoStore.deleteTodo( element.getAttribute('data-id') );
-    } else if ( element && classList.contains( 'toggle' ) ) {
       todoStore.toggleTodo( element.getAttribute('data-id') );
-    } else {
-      console.log( 'dev' );
-    }
+      displayTodo();
+  });
 
-    displayTodo();
+  todoListUl.addEventListener('click', (event) => {
+      const isDestroyElement = event.target.className === 'destroy';
+      const element = event.target.closest('[data-id]');
+      if ( !element || !isDestroyElement ) return;
+
+      todoStore.deleteTodo( element.getAttribute('data-id') );
+      displayTodo();
+  });
+
+  todoListUl.addEventListener('dblclick', (event) => {
+    
+    const element = event.target.closest('[data-id]');
+    element.classList.add('editing');
+
+    const input = element.querySelector('.edit');
+    input.value = element.querySelector('label').innerText;
+    input.focus();
+        
+    input.addEventListener('keyup', (event) => {
+      if ( event.keyCode !== 13 ) return;
+      if ( event.target.value.trim().length === 0 ) return;
+      
+      todoStore.updateTodo( element.getAttribute('data-id'), event.target.value.trim() );
+      displayTodo();
+    })
+
+    input.addEventListener('blur', (event) => {
+      element.classList.remove('editing')
+    })
+
   });
 
   clearCompletedBtn.addEventListener('click', () => {

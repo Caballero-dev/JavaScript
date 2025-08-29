@@ -62,6 +62,14 @@ const addTodo = ( description ) => {
   saveStateToLocalStorage();
 }
 
+const updateTodo = ( todoId, description ) => {
+  if(!description) throw new Error('Description is required');
+  state.todos = state.todos.filter( todo => {
+    return todo.id === todoId ?  todo.description = description : todo;
+  });
+  saveStateToLocalStorage();
+}
+
 /**
  * 
  * @param {String} todoId 
@@ -115,4 +123,5 @@ export default {
   loadStore,
   setFilter,
   toggleTodo,
+  updateTodo
 }
