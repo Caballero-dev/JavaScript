@@ -1,7 +1,7 @@
 import { heroes } from "../data/heroes";
 
 /**
- * Componente que demuestra el uso de funciones async/await para manejar promesas de una forma más limpia y sincrónica.
+ * Componente que demuestra el uso de funcion async para manejar promesas.
  * 
  * @param {HTMLDivElement} element - Elemento HTML donde se mostrará el resultado
  */
@@ -59,7 +59,7 @@ const findHero = async ( id ) => {
 
 
 /*
-* ASYNC/AWAIT
+* ASYNC
 
 * ¿Qué es 'async'?
 Es una palabra clave que se coloca antes de una función para indicar que:
