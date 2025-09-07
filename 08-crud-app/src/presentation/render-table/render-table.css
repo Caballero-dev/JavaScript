@@ -1,0 +1,19 @@
+table {
+  background-color: rgba(0, 0, 0, 0.348);
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+table #btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+table #btnSelect {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+table #btnDelete {
+  background-color: rgba(255, 0, 0, 0.5)
+}
