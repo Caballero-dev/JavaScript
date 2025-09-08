@@ -1,4 +1,6 @@
 import usersStore from '../../store/users-store';
+import { deleteUserById } from '../../use-cases/delete-user-by-id';
+import { showModal } from '../render-modal/render-modal';
 import './render-table.css';
 
 let table;
@@ -25,6 +27,41 @@ const createTable = () => {
 
 /**
  * 
+ * @param {MouseEvent} event 
+ */
+const tableSelectListener = (event) => {
+  const element = event.target.closest('#btnSelect');
+  if ( !element ) return;
+
+  const id = element.getAttribute('data-id');
+  showModal( id );
+}
+
+/**
+ * 
+ * @param {MouseEvent} event 
+ */
+const tableDeleteListener = async (event) => {
+  const element = event.target.closest('#btnDelete');
+  if ( !element ) return;
+
+  const id = element.getAttribute('data-id');
+  try {
+
+    await deleteUserById(id);
+    await usersStore.reloadPage(); 
+    document.querySelector('#current-page').innerText = usersStore.getCurrentPage();
+    renderTable();
+
+  } catch (error) {
+    console.log( error );
+    alert('No se pudo eliminar');
+  }
+}
+
+
+/**
+ * 
  * @param {HTMLDivElement} element 
  */
 export const renderTable = ( element ) => {
@@ -35,7 +72,8 @@ export const renderTable = ( element ) => {
     table = createTable();
     element.append( table );
 
-    // TODO: listerners
+    table.addEventListener('click', tableSelectListener);
+    table.addEventListener('click', tableDeleteListener);
   }
 
   let tableHTML = '';
@@ -48,8 +86,8 @@ export const renderTable = ( element ) => {
         <td>${ usr.lastName }</td>
         <td>${ usr.isActive }</td>
         <td id="btn">
-          <button id="btnSelect">Select</button>
-          <button id="btnDelete">Delete</button>
+          <button id="btnSelect" data-id="${ usr.id }">Select</button>
+          <button id="btnDelete" data-id="${ usr.id }">Delete</button>
         </td>
       </tr>
     `;

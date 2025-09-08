@@ -1,0 +1,44 @@
+.hide-modal {
+  display: none !important;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  width: 20rem;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.modal-dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-dialog [type="text"], input[type="number"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.modal-dialog button {
+  margin-top: 1rem;
+}
+
+.modal-dialog span, label {
+  color: black;
+  font-size: 1.3rem;
+}
